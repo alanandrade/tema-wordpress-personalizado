@@ -3,17 +3,24 @@
 <main class="home-main">
     <div class="container">
         <h1>Bem vindo a Maluras!</h1>
+    
+        <?php
+            $args = array( 'post_type' => 'imovel' );
+            $loop = new WP_Query( $args );
+            if( $loop->have_posts() ) { 
+        ?>
+
         <ul class="imoveis-listagem">
-            <?php //Inicio do Loop de Posts
-                if( have_posts() ) {
-                    while( have_posts() ) {
-                        the_post();
-                ?>
+            <?php while( $loop->have_posts() ) {
+                $loop->the_post();
+            ?>
 
                 <li class="imoveis-listagem-item">
-                    <?php the_post_thumbnail(); ?> <!-- Inclui Imagem Destacada do Post -->
-                    <h2><?php the_title(); ?></h2> <!-- Inclui Titulo do Post -->
-                    <div><?php the_content(); ?></div> <!-- Inclui Conteúdo do Post -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail(); ?> <!-- Inclui Imagem Destacada do Post -->
+                        <h2><?php the_title(); ?></h2> <!-- Inclui Titulo do Post -->
+                        <div><?php the_content(); ?></div> <!-- Inclui Conteúdo do Post -->
+                    </a>
                 </li>
 
             <?php
