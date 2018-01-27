@@ -12,6 +12,11 @@
     <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/reset.css"> 
     <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/style.css"> 
 
+    <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/assets/css/comum.css"> 
+    <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/assets/css/header.css"> 
+
+    <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/assets/css/<?= $css_especifico; ?>.css"> 
+
     <?php wp_head(); ?>
 
 </head>

@@ -1,4 +1,7 @@
-<?php get_header(); ?> <!-- Recupera o header para o Index -->
+<?php
+    $css_especifico = 'index';
+    require_once('header.php');  //Recupera o header para o Index
+?>
 
 <main class="home-main">
     <div class="container">
@@ -31,6 +34,7 @@
         </ul>
 
     </div>
+    <?php get_footer(); ?> <!-- Recupera o footer para o Index -->
 </main>
 
-<?php get_footer(); ?> <!-- Recupera o footer para o Index -->
+

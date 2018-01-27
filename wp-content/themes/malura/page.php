@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php 
+    $css_especifico = 'page';
+    require_once('header.php');
+?>
 
 <main class="pagina-main">
     <article class="pagina">
@@ -42,7 +45,8 @@
         </form>
         
         <?php } ?>
-
     </article>
+    
     <?php get_footer(); ?>
 </main>
+
