@@ -26,7 +26,7 @@
             <?php
                 }
                     }
-                //Fim Loop de Posts
+            //Fim Loop de Posts
             ?>
         </ul>
 

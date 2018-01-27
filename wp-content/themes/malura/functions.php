@@ -32,4 +32,12 @@ function cadastrando_post_type_imoveis(){
     register_post_type( 'imovel', $args);
 }
 
-add_action('init', 'cadastrando_post_type_imoveis'); //Executar essa funcao com ao iniciae o arquivo function(init)
+add_action('init', 'cadastrando_post_type_imoveis'); //Executar essa funcao ao iniciar o arquivo function(init)
+
+
+//Adicionando CRUD de Menu ao template
+function registrar_menu_navegacao(){
+    register_nav_menu('header-menu', 'main-menu');//Registrar menu de navegação, 'Localizacao do menu', 'Menu principal'
+}
+
+add_action('init', 'registrar_menu_navegacao');
