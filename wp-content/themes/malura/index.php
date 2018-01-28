@@ -4,9 +4,7 @@
 ?>
 
 <main class="home-main">
-    <div class="container">
-        <h1>Bem vindo a Maluras!</h1>
-    
+    <div class="container">    
         <?php
             $args = array( 'post_type' => 'imovel' );
             $loop = new WP_Query( $args );

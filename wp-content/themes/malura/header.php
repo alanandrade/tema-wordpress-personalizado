@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Malura Imobiliária</title>
 
     <?php $caminho_home = get_template_directory_uri(); ?>
     <!-- Esta function traz da raiz do wordpress até a pasta de nosso tema -->
@@ -17,8 +16,12 @@
 
     <link rel="stylesheet" type="text/css" href="<?= $caminho_home; ?>/assets/css/<?= $css_especifico; ?>.css"> 
 
-    <?php wp_head(); ?>
+    <!-- Pegar o Title do Site -->
+    <title>
+        <?php geraTitle(); ?>
+    </title> <!-- Se NAO(!) for page Home, adiciona o echo. Se for home nao adiciona o echo.-->
 
+    <?php wp_head(); ?>
 </head>
 <body>
     <header>

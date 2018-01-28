@@ -41,3 +41,13 @@ function registrar_menu_navegacao(){
 }
 
 add_action('init', 'registrar_menu_navegacao');
+
+//Funcao de gerar title de admin do wordpress
+function geraTitle() {
+    bloginfo('name');
+    if( !is_home() ) echo(' | '); 
+
+    the_title();
+}
+
+?>
